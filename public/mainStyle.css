@@ -1,0 +1,28 @@
+body{
+  margin: 0;
+  box-sizing: border-box;
+}
+.login-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background: rgb(164, 255, 205);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-text-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border: 3px solid rgb(94, 201, 189);
+  border-radius: 5px;
+}
+.login-text-wrapper:hover{
+  border: 4px solid rgb(18, 139, 125);
+}
+.hand{
+  cursor: pointer;
+  cursor: hand;
+}

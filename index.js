@@ -16,12 +16,21 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
+app.use(cookieParser());
 app.use(session({
   secret: config.sessionSecret,
   currentUser: null,
   resave: false,
   saveUninitialized: true
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+/////////////
+// DATABASE //
+/////////////
+
 
 
 app.listen(config.port, function(){
